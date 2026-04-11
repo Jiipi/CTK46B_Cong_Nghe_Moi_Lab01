@@ -1,1 +1,1 @@
-﻿const greeting = 'Xin chào từ main!';
+const greeting = 'Xin chao! Hello World!';

@@ -1,5 +1,12 @@
 function add(a, b) {
-	return Number(a) + Number(b);
+	const left = Number(a);
+	const right = Number(b);
+
+	if (Number.isNaN(left) || Number.isNaN(right)) {
+		return 0;
+	}
+
+	return left + right;
 }
 
 function buildGreeting(name) {

@@ -1,1 +1,3 @@
-# CTK46B_Cong_Nghe_Moi_Lab01
+"# Bài Th?c Hành 1" 
+"" 
+"Ðây là project th?c hành cho môn Các công ngh? m?i trong PTPM." 

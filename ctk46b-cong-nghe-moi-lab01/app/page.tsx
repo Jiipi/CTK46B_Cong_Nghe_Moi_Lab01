@@ -62,6 +62,34 @@ export default function Home() {
             một project hoàn chỉnh.
           </p>
         </div>
+
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <article className="rounded-2xl bg-violet-100 p-5 ring-1 ring-violet-200">
+            <h2 className="text-lg font-bold text-violet-900">
+              🎯 Danh sách sở thích
+            </h2>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-violet-900 sm:text-base">
+              <li>Thiết kế giao diện web hiện đại với Tailwind CSS.</li>
+              <li>Học cách tối ưu trải nghiệm người dùng trên mobile.</li>
+              <li>Khám phá AI tools để tăng tốc quá trình lập trình.</li>
+            </ul>
+          </article>
+
+          <article className="rounded-2xl bg-emerald-100 p-5 ring-1 ring-emerald-200">
+            <h2 className="text-lg font-bold text-emerald-900">
+              📚 Mục tiêu học tập tuần này
+            </h2>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-emerald-900 sm:text-base">
+              <li>
+                Hoàn thành bài lab Git và nắm chắc quy trình merge conflict.
+              </li>
+              <li>Xây dựng 1 trang Next.js có bố cục responsive hoàn chỉnh.</li>
+              <li>
+                Triển khai project lên Vercel và kiểm tra metadata chuẩn SEO.
+              </li>
+            </ul>
+          </article>
+        </div>
       </section>
     </main>
   );

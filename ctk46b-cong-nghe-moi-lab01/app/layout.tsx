@@ -1,22 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: {
-    default: "CTK46 - Lab 01",
-    template: "%s | CTK46 - Lab 01",
-  },
-  description: "Bài thực hành 1 - Các công nghệ mới trong PTPM",
-  applicationName: "CTK46B Lab 01",
-  keywords: ["Next.js", "CTK46B", "Lab 01", "PTPM"],
-  authors: [{ name: "Trần Ngọc Hưng" }],
-  creator: "Trần Ngọc Hưng",
-  openGraph: {
-    title: "CTK46 - Lab 01",
-    description: "Bài thực hành 1 - Các công nghệ mới trong PTPM",
-    locale: "vi_VN",
-    type: "website",
-  },
+  title: "Portfolio — Trần Ngọc Hưng",
+  description: "Website portfolio cá nhân — CTK46",
 };
 
 export default function RootLayout({
@@ -26,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body>{children}</body>
+      <body className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

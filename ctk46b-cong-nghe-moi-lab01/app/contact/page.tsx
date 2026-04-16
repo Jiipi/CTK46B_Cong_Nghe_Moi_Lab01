@@ -17,13 +17,16 @@ export default function ContactPage() {
           <p>
             <strong>GitHub:</strong>{" "}
             <a
-              href="https://github.com/nguyenvana"
+              href="https://github.com/Jiipi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
-              github.com/nguyenvana
+              github.com/Jiipi
             </a>
+          </p>
+          <p>
+            <strong>Họ và tên:</strong> Trần Ngọc Hưng
           </p>
           <p>
             <strong>Địa chỉ:</strong> Đại học Đà Lạt, 01 Phù Đổng Thiên Vương,

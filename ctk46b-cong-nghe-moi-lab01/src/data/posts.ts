@@ -5,6 +5,7 @@ export interface Post {
   content: string;
   date: string;
   category: string;
+  author: string;
 }
 
 export const posts: Post[] = [
@@ -25,6 +26,7 @@ Một số ưu điểm nổi bật của Next.JS:
 - Hỗ trợ TypeScript sẵn có`,
     date: "2025-01-15",
     category: "Công nghệ",
+    author: "Trần Ngọc Hưng",
   },
   {
     slug: "hoctailwind-css",
@@ -46,6 +48,7 @@ Bạn viết trực tiếp trong HTML:
 - File CSS cuối cùng rất nhỏ (chỉ chứa class đã dùng)`,
     date: "2025-01-20",
     category: "Công nghệ",
+    author: "Trần Ngọc Hưng",
   },
   {
     slug: "kinh-nghiem-hoc-lap-trinh",
@@ -66,6 +69,43 @@ Hãy bắt đầu từ những dự án nhỏ và tăng dần độ phức tạp
 Tham gia các cộng đồng lập trình để học hỏi và chia sẻ kinh nghiệm.`,
     date: "2025-02-01",
     category: "Học tập",
+    author: "Trần Ngọc Hưng",
+  },
+  {
+    slug: "xay-dung-rest-api-voi-express",
+    title: "Xây dựng REST API với Express từ A đến Z",
+    excerpt:
+      "Những bước cốt lõi để thiết kế API rõ ràng, có validation và dễ mở rộng.",
+    content: `Khi xây dựng REST API với Express, điều quan trọng nhất là chuẩn hóa cấu trúc.
+
+Các bước tôi thường áp dụng:
+1. Tách route, controller, service thành module riêng.
+2. Dùng middleware để validate input ngay từ đầu.
+3. Chuẩn hóa mã lỗi và response JSON để frontend xử lý dễ hơn.
+4. Bổ sung logging để theo dõi request khi debug.
+
+Sau khi hoàn thiện, API sẽ dễ bảo trì và có thể mở rộng thêm tính năng nhanh hơn.`,
+    date: "2025-02-10",
+    category: "Công nghệ",
+    author: "Trần Ngọc Hưng",
+  },
+  {
+    slug: "toi-uu-hieu-nang-react-app",
+    title: "Tối ưu hiệu năng React App trong thực tế",
+    excerpt:
+      "Một số kỹ thuật giúp giảm render thừa và cải thiện trải nghiệm người dùng.",
+    content: `Tối ưu hiệu năng React không chỉ là dùng memo một cách máy móc.
+
+Những điểm mình ưu tiên:
+1. Tránh truyền object/function mới liên tục xuống component con.
+2. Chia nhỏ component theo responsibility để phạm vi render hẹp hơn.
+3. Dùng lazy loading cho phần nội dung chưa cần hiển thị ngay.
+4. Đo hiệu năng bằng React DevTools Profiler trước khi tối ưu.
+
+Tối ưu đúng chỗ giúp ứng dụng mượt hơn mà vẫn giữ code dễ đọc.`,
+    date: "2025-02-18",
+    category: "Học tập",
+    author: "Trần Ngọc Hưng",
   },
 ];
 

@@ -1,22 +1,17 @@
 import Link from "next/link";
 
-export default function BlogPostNotFound() {
+export default function PostNotFound() {
   return (
-    <div className="rounded-xl border bg-white p-8 text-center shadow-sm">
-      <p className="text-sm font-semibold uppercase tracking-wide text-red-500">
-        404 - Not Found
-      </p>
-      <h1 className="mt-2 text-2xl font-bold text-slate-900">
-        Không tìm thấy bài viết
-      </h1>
-      <p className="mt-3 text-slate-600">
-        Bài viết bạn đang tìm không tồn tại hoặc đã bị thay đổi đường dẫn.
+    <div className="text-center py-12">
+      <h2 className="text-2xl font-bold mb-4">Bài viết không tồn tại</h2>
+      <p className="text-gray-600 mb-6">
+        Bài viết bạn đang tìm kiếm không có trong hệ thống.
       </p>
       <Link
         href="/blog"
-        className="mt-6 inline-block text-sm font-semibold text-blue-600 hover:underline"
+        className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors inline-block"
       >
-        ← Quay lại danh sách blog
+        Quay lại Blog
       </Link>
     </div>
   );

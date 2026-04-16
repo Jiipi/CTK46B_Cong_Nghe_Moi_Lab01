@@ -1,33 +1,5 @@
-const projects = [
-  {
-    title: "Portfolio cá nhân",
-    description:
-      "Website giới thiệu bản thân xây dựng bằng Next.js, TypeScript và Tailwind CSS.",
-    tech: ["Next.JS", "Tailwind CSS", "TypeScript"],
-    context: "Bài lab môn Các công nghệ mới trong PTPM",
-  },
-  {
-    title: "Ứng dụng Quản lý Công việc",
-    description:
-      "Todo App hỗ trợ tạo, cập nhật và lọc công việc, lưu dữ liệu bằng Local Storage.",
-    tech: ["React", "TypeScript", "Local Storage"],
-    context: "Bài tập thực hành Frontend",
-  },
-  {
-    title: "API Quản lý Sản phẩm",
-    description:
-      "Xây dựng REST API với phân trang, tìm kiếm, và validate dữ liệu đầu vào.",
-    tech: ["Node.js", "Express", "PostgreSQL"],
-    context: "Đồ án môn Phát triển ứng dụng web",
-  },
-  {
-    title: "Website Blog học tập",
-    description:
-      "Trang blog chia sẻ kiến thức học tập, hỗ trợ markdown và phân loại bài viết.",
-    tech: ["Next.JS", "MDX", "Tailwind CSS"],
-    context: "Project cá nhân",
-  },
-];
+import Link from "next/link";
+import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
@@ -37,11 +9,18 @@ export default function ProjectsPage() {
       <div className="grid gap-6">
         {projects.map((project) => (
           <div
-            key={project.title}
+            key={project.id}
             className="border rounded-lg p-6 hover:shadow-md transition-shadow"
           >
-            <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-            <p className="text-gray-600 mb-4">{project.description}</p>
+            <h2 className="text-xl font-semibold mb-2">
+              <Link
+                href={`/projects/${project.id}`}
+                className="hover:text-blue-600 transition-colors"
+              >
+                {project.title}
+              </Link>
+            </h2>
+            <p className="text-gray-600 mb-4">{project.summary}</p>
             <p className="text-sm text-gray-500 mb-4">{project.context}</p>
             <div className="flex gap-2">
               {project.tech.map((t) => (
@@ -53,6 +32,12 @@ export default function ProjectsPage() {
                 </span>
               ))}
             </div>
+            <Link
+              href={`/projects/${project.id}`}
+              className="inline-block mt-4 text-sm font-semibold text-blue-600 hover:underline"
+            >
+              Xem chi tiết →
+            </Link>
           </div>
         ))}
       </div>

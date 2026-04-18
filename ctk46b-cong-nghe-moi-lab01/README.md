@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lab 2 - Next.js App Router va Client Components
 
-## Getting Started
+## Thong tin
 
-First, run the development server:
+- Ho ten: Tran Ngoc Hung
+- Lop: CTK46B
+- MSSV: 2212377
+- Mon: Cac cong nghe moi trong phat trien phan mem
+
+## Muc tieu Lab 2
+
+- Xay dung website portfolio/blog voi Next.js App Router.
+- Ap dung Tailwind CSS cho giao dien responsive.
+- Su dung Server Component va Client Component dung ngu canh.
+- Thuc hanh voi "use client" va quan sat loi khi dat sai boundary.
+
+## Noi dung da thuc hien
+
+1. Giao dien va dieu huong
+- Navbar responsive co hamburger menu tren mobile.
+- Chuyen doi mau sac theo huong emerald/violet/orange.
+- Ho tro dark mode bang class-based dark variant.
+
+2. Trang chu va blog
+- Trang chu co Hero, Skills, CTA, Counter tuong tac.
+- Trang blog co danh sach bai viet va trang chi tiet bai viet.
+- Cuoi bai viet co LikeButton de tang/giam luot thich.
+
+3. Client Components trong bai
+- Counter: src/components/counter.tsx
+- LikeButton: src/components/like-button.tsx
+- ThemeToggle: src/components/theme-toggle.tsx
+- CopyButton: src/components/copy-button.tsx
+
+4. Bai thuc hanh loi "use client"
+- Da thu bo "use client" trong Counter de tai hien loi build.
+- Loi xuat hien do useState chi duoc phep trong Client Component.
+- Sau do da them lai "use client" de build pass.
+
+## Cong nghe su dung
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- ESLint
+
+## Huong dan chay du an
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mo trinh duyet tai http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Kiem tra chat luong
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## Tai lieu tham khao cho Lab 2
 
-To learn more about Next.js, take a look at the following resources:
+- Client Components: https://nextjs.org/docs/app/building-your-application/rendering/client-components
+- use client directive: https://nextjs.org/docs/app/api-reference/directives/use-client
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Hinh anh minh hoa
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 1) Trang chu (Desktop)
 
-## Deploy on Vercel
+![Lab 2 Home Desktop](public/screenshots/lab2-home-desktop.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2) Trang Blog (Desktop)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Lab 2 Blog Desktop](public/screenshots/lab2-blog-desktop.png)
+
+### 3) Trang chu (Mobile viewport)
+
+![Lab 2 Home Mobile](public/screenshots/lab2-home-mobile.png)
+
+## Ghi chu
+
+- Runtime chinh dang su dung thu muc app/.
+- Thu muc src/app duoc dong bo de phuc vu yeu cau bai tap.

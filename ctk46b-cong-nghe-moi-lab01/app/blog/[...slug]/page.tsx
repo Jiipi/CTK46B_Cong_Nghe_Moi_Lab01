@@ -9,6 +9,12 @@ interface BlogPostPageProps {
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
 
+  if (slug[0] === "trigger-error") {
+    // Intentional runtime error for testing segment error boundary.
+    const broken = undefined as unknown as { run: () => void };
+    broken.run();
+  }
+
   if (slug.length > 1) {
     return (
       <div className="rounded-xl border border-amber-200 bg-amber-50 p-6">
@@ -19,7 +25,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           /blog/[...slug] đã bắt URL nhiều cấp
         </h1>
         <p className="mt-3 text-amber-800">
-          Đường dẫn bạn truy cập: <span className="font-mono">{slug.join("/")}</span>
+          Đường dẫn bạn truy cập:{" "}
+          <span className="font-mono">{slug.join("/")}</span>
         </p>
         <p className="mt-2 text-amber-800">
           Với [slug] trước đây, URL dạng /blog/a/b/c sẽ không match route. Với
@@ -45,7 +52,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <article className="rounded-xl border bg-white p-6 shadow-sm">
       <p className="text-sm text-gray-500">{post.date}</p>
       <h1 className="mt-2 text-3xl font-bold text-slate-900">{post.title}</h1>
-      <p className="mt-2 text-sm font-semibold text-blue-600">{post.category}</p>
+      <p className="mt-2 text-sm font-semibold text-blue-600">
+        {post.category}
+      </p>
       <p className="mt-1 text-sm text-slate-600">Tác giả: {post.author}</p>
 
       <div className="mt-6 whitespace-pre-line leading-relaxed text-slate-700">

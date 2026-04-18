@@ -1,74 +1,75 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,#dbeafe,#f8fafc_45%,#e0f2fe)] px-6 py-12 text-slate-800">
-      <section className="mx-auto w-full max-w-5xl rounded-3xl border border-white/70 bg-white/90 p-8 shadow-[0_20px_60px_-20px_rgba(15,23,42,0.45)] backdrop-blur sm:p-10">
-        <p className="mb-4 inline-block rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold tracking-wide text-sky-700">
-          Trang chủ
-        </p>
+    <div className="max-w-5xl mx-auto px-4 py-16">
+      {/* Hero section */}
+      <div className="text-center mb-16">
+        <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+          <span className="text-4xl">A</span>
+        </div>
 
-        <h1 className="mb-3 text-4xl font-black tracking-tight text-sky-900 sm:text-5xl">
-          Xin chào! Tôi là Trần Ngọc Hưng
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Xin chào! Tôi là <span className="text-blue-600">Nguyễn Văn A</span>
         </h1>
-        <p className="mb-8 text-lg text-slate-600">
-          Sinh viên Công nghệ Thông tin tại Đại học Đà Lạt, đam mê phát triển
-          web với React, Next.js và TypeScript.
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Sinh viên Công nghệ Thông tin tại Đại học Đà Lạt. Đam mê phát triển
+          web và khám phá các công nghệ mới.
         </p>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-2xl bg-sky-100 p-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">
-              Họ và tên
-            </p>
-            <p className="mt-1 text-lg font-bold text-sky-900">
-              Trần Ngọc Hưng
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-indigo-100 p-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-indigo-700">
-              MSSV
-            </p>
-            <p className="mt-1 text-lg font-bold text-indigo-900">2212377</p>
-          </div>
-
-          <div className="rounded-2xl bg-amber-100 p-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-amber-700">
-              Lớp
-            </p>
-            <p className="mt-1 text-lg font-semibold text-amber-900">CTK46B</p>
-          </div>
-
-          <div className="rounded-2xl bg-rose-100 p-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-rose-700">
-              Email
-            </p>
-            <a
-              href="mailto:2212377@dlu.edu.vn"
-              className="mt-1 block text-sm font-semibold text-rose-900 hover:underline"
-            >
-              2212377@dlu.edu.vn
-            </a>
-          </div>
+        <div className="flex justify-center gap-4">
+          <Link
+            href="/projects"
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Xem dự án
+          </Link>
+          <Link
+            href="/contact"
+            className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+          >
+            Liên hệ
+          </Link>
         </div>
+      </div>
 
-        <div className="mt-6 rounded-2xl bg-white p-5 ring-1 ring-slate-200">
-          <p className="text-base leading-relaxed text-slate-700">
-            GitHub:{" "}
-            <a
-              href="https://github.com/Jiipi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-sky-700 hover:underline"
+      {/* Skills section */}
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold text-center mb-8">Kỹ năng</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.JS",
+            "Tailwind CSS",
+            "Node.js",
+            "Git",
+            "SQL",
+          ].map((skill) => (
+            <div
+              key={skill}
+              className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 hover:text-blue-600 transition-colors"
             >
-              github.com/Jiipi
-            </a>
-          </p>
-          <p className="mt-2 text-base leading-relaxed text-slate-700">
-            Mục tiêu: Xây dựng các sản phẩm web có trải nghiệm tốt, tối ưu hiệu
-            năng và triển khai thực tế trên cloud.
-          </p>
+              {skill}
+            </div>
+          ))}
         </div>
-      </section>
-    </main>
+      </div>
+
+      {/* CTA section */}
+      <div className="bg-blue-50 rounded-2xl p-8 text-center">
+        <h2 className="text-2xl font-bold mb-3">Đọc Blog của tôi</h2>
+        <p className="text-gray-600 mb-4">
+          Chia sẻ kiến thức và kinh nghiệm về lập trình, công nghệ
+        </p>
+        <Link
+          href="/blog"
+          className="text-blue-600 font-semibold hover:underline"
+        >
+          Xem blog →
+        </Link>
+      </div>
+    </div>
   );
 }

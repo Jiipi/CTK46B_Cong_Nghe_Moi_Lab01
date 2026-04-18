@@ -10,6 +10,13 @@ export default async function ProjectDetailPage({
   params,
 }: ProjectDetailPageProps) {
   const { id } = await params;
+
+  if (id === "trigger-error") {
+    // Intentional runtime error for testing root error boundary.
+    const broken = undefined as unknown as { run: () => void };
+    broken.run();
+  }
+
   const project = getProjectById(id);
 
   if (!project) {

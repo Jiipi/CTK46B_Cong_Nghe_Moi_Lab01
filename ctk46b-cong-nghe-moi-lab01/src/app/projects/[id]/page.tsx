@@ -27,7 +27,7 @@ export default async function ProjectDetailPage({
     <div className="max-w-5xl mx-auto px-4 py-12">
       <Link
         href="/projects"
-        className="text-blue-600 hover:underline text-sm mb-6 inline-block"
+        className="text-emerald-600 hover:underline text-sm mb-6 inline-block"
       >
         ← Quay lại danh sách dự án
       </Link>
@@ -56,7 +56,7 @@ export default async function ProjectDetailPage({
           {project.tech.map((tech) => (
             <span
               key={tech}
-              className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700"
+              className="rounded-full bg-emerald-100 px-3 py-1 text-sm text-emerald-700"
             >
               {tech}
             </span>
@@ -69,7 +69,7 @@ export default async function ProjectDetailPage({
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold text-blue-600 hover:underline"
+              className="text-sm font-semibold text-emerald-600 hover:underline"
             >
               Xem repository GitHub
             </a>

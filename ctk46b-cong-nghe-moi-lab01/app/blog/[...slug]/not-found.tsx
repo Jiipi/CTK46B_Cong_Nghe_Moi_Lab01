@@ -14,7 +14,7 @@ export default function BlogPostNotFound() {
       </p>
       <Link
         href="/blog"
-        className="mt-6 inline-block text-sm font-semibold text-blue-600 hover:underline"
+        className="mt-6 inline-block text-sm font-semibold text-emerald-600 hover:underline"
       >
         ← Quay lại danh sách blog
       </Link>

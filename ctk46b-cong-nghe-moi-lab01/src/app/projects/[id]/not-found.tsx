@@ -12,7 +12,7 @@ export default function ProjectNotFound() {
         </h1>
         <Link
           href="/projects"
-          className="mt-6 inline-block text-sm font-semibold text-blue-600 hover:underline"
+          className="mt-6 inline-block text-sm font-semibold text-emerald-600 hover:underline"
         >
           ← Quay lại danh sách dự án
         </Link>
